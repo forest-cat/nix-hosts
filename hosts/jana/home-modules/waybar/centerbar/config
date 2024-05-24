@@ -1,0 +1,250 @@
+{
+    "layer": "top", // Waybar at top layer
+    "top": "left", // Waybar position (top|bottom|left|right)
+    "output": "DP-2",
+    //"height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": -1, // Gaps between modules (4px)
+    //"margin-top": 5, // margin to the top of the screen 
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", 
+                     "hyprland/submap", 
+                     "keyboard-state"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/arrow1",
+                      "pulseaudio",
+                      "custom/arrow2",
+                      "network",
+                      "custom/arrow3",
+                      "cpu",
+                      "custom/arrow4", 
+                      "memory",
+                      "custom/arrow5",
+                      "temperature",
+                      "custom/arrow6",
+                      "disk",
+                      "custom/arrow7", 
+                      "clock",
+                      "custom/arrow8", 
+                      "tray",
+                      "custom/arrow9", 
+                      "group/group-power"],
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "Europe/Berlin",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%m-%Y}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        "thermal-zone": 0,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 70,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["󱃃", "󰔏", "󱃂"]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery#bat0": {
+        "bat": "BAT0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "INT: {timeTo}"
+    },
+    "battery#bat1": {
+        "bat": "BAT1",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "EXT: {timeTo}"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon} {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "hyprland/workspaces": {
+        "format": " {name}-{icon} ",
+        "on-click": "activate",
+        "format-icons": {
+          "1": "",
+          "2": "",
+          "3": "󰅩",
+          "4": "",
+          "5": "",
+          "6": "",
+          "7": "",
+          "8": "󰌆",
+          //"urgent": "",
+          //"active": "",
+          "default": "󱥸"
+        },
+        "sort-by-number": true
+    },
+    "mpris": {
+    "format": "{title} - {artist} 󰝚 ",
+    "format-paused": " 󰝛 ",
+    "player-icons": {
+        "default": "▶",
+        "mpv": "🎵"
+        },
+    "status-icons": {
+        "paused": "⏸"
+        }
+    // "ignored-players": ["firefox"]
+    },
+    "hyprland/submap": {
+        "format": "{} 󰩨 ",
+        "max-length": 8,
+        "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "separate-outputs": true
+    },
+    "disk": {
+        "interval": 60,
+        "format": "{percentage_free}%  ",
+        "path": "/"
+    },
+	"custom/arrow1": {
+		"format": "  ",
+		"tooltip": false
+	},
+    "custom/arrow2": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow3": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow4": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow5": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow6": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow7": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow8": {
+		"format": "",
+		"tooltip": false
+	},
+    "custom/arrow9": {
+		"format": "",
+		"tooltip": false
+	},
+
+
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/powermain", // First element is the "group leader" and won't ever be hidden
+            "custom/power",
+            "custom/reboot",
+            "custom/quit",
+            "custom/lock",
+        ]
+    },
+    "custom/quit": {
+        "format": " 󰗼 ",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+        "format": " 󰍁 ",
+        "tooltip": false,
+        "on-click": "bash ~/.config/swaylock/swaylock.sh"
+    },
+    "custom/reboot": {
+        "format": " 󰜉 ",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": " 󰤆 ",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    },
+    "custom/powermain": {
+        "format": "  ",
+        "tooltip": false
+    }
+}

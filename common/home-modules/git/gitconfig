@@ -1,0 +1,8 @@
+[user]
+        email = forest_cat@dismail.de
+        name = Forestcat
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAQfrndMYrgxY6shAy+L1q/rvcLs3/VRAsUqp594OXrr forest_cat@dismail.de
+[commit]
+        gpgsign = true
+[gpg]
+        format = ssh

@@ -1,0 +1,350 @@
+/* Colors (gruvbox) */
+
+@define-color hyprland-window-color	#ffffff;
+
+@define-color submap #ff6161;
+
+@define-color clock-background-color #353556;
+
+@define-color mpris-color #ffffff;
+@define-color mpris-background-color #514a72;
+
+@define-color battery-bat0-background-color #ffffff;
+@define-color battery-bat0-color	#000000;
+@define-color battery-bat0-charging-color #ffffff;
+@define-color battery-bat0-charging-background-color	#26A65B;
+@define-color battery-bat0-blink-background-color #ffffff;
+@define-color battery-bat0-blink-color #000000;
+@define-color battery-bat0-critical-background-color #f53c3c;
+@define-color battery-bat0-critical-color #ffffff;
+
+@define-color battery-bat1-background-color #f28fff;
+@define-color battery-bat1-color	#000000;
+@define-color battery-bat1-charging-color #ffffff;
+@define-color battery-bat1-charging-background-color	#26A65B;
+@define-color battery-bat1-blink-background-color #ffffff;
+@define-color battery-bat1-blink-color #000000;
+@define-color battery-bat1-critical-background-color #f53c3c;
+@define-color battery-bat1-critical-color #ffffff;
+
+@define-color cpu-background-color #2ecc71;
+@define-color cpu-color #ffffff;
+
+@define-color memory-background-color #9b59b6;
+
+@define-color disk-background-color	#964B00;
+
+@define-color backlight-background-color #90b1b1;
+
+@define-color network-background-color #2980b9;
+@define-color network-disconnected-background-color #f53c3c;
+
+@define-color pulseaudio-background-color #f1c40f;
+@define-color pulseaudio-color #000000;
+@define-color pulseaudio-mute-background-color #90b1b1;
+@define-color pulseaudio-mute-color #2a5c45;
+
+@define-color temperature-background-color #f0932b;
+@define-color temperature-critical-background-color	#eb4d4b;
+
+@define-color tray-background-color #1c213b;
+@define-color tray-attention-background-color #eb4d4b;
+
+
+@define-color keyboard-background-color #97e1ad;
+@define-color keyboard-color #ffffff;
+@define-color keyboard-locked-background-color #ff6161;
+
+@define-color power-group-background-color #020a22;
+
+
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(99, 114, 125, 0.5);
+    color: @hyprland-window-color;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffbcff;
+}
+
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    /* background-color: #eb4d4b; */
+    box-shadow: inset 0 -3px #eb4d4b, inset -3px 0px #eb4d4b, inset 0 3px #eb4d4b, inset 3px 0px #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#submap {
+    background-color: @submap;
+}
+
+#clock {
+    background-color: @clock-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#mpris {
+    background-color: @mpris-background-color;
+    color: @mpris-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#battery.bat0 {
+    background-color: @battery-bat0-background-color;
+    color: @battery-bat0-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#battery.bat1 {
+    background-color: @battery-bat1-background-color;
+    color: @battery-bat1-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+
+/*
+#battery.charging, #battery.plugged {
+    color: @battery-charging-color;
+    background-color: @battery-charging-background-color;
+}
+
+
+
+@keyframes blink {
+    to {
+        background-color: @battery-blink-background-color;
+        color: @battery-blink-color;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @battery-critical-background-color;
+    color: @battery-critical-color;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+*/
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: @cpu-background-color;
+    color: @cpu-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#memory {
+    background-color: @memory-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#disk {
+    background-color: @disk-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#backlight {
+    background-color: @backlight-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#network {
+    background-color: @network-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+/*
+#network.disconnected {
+    background-color: @network-disconnected-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+*/
+
+#pulseaudio {
+    background-color: @pulseaudio-background-color;
+    color: @pulseaudio-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#temperature {
+    background-color: @temperature-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+/*
+#temperature.critical {
+    background-color: @temperature-critical-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+*/
+
+#tray {
+    background-color: @tray-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+/*    background-color: @tray-attention-background-color; */
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+#keyboard-state {
+    /* background: @keyboard-background-color; */
+    color: @keyboard-color;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+    box-shadow: inset 0 -3px rgba(255, 255, 255, 0.5);
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    /* background: @keyboard-locked-background-color; */
+    box-shadow: inset 0 -3px @keyboard-locked-background-color, inset -3px 0px @keyboard-locked-background-color, inset 0 3px @keyboard-locked-background-color, inset 3px 0px @keyboard-locked-background-color;
+}
+
+#group-power {
+    background: @power-group-background-color;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+
+
+#custom-arrow1 {
+    font-size: 20pt;
+	color: @mpris-background-color;
+	background: rgba(0, 0, 0, 0);
+}
+
+#custom-arrow2 {
+	font-size: 20pt;
+	color: @clock-background-color;
+	background: @mpris-background-color;
+}
+
+#custom-arrow3 {
+	font-size: 20pt;
+	color: @tray-background-color;
+	background: @clock-background-color;
+}
+
+#custom-arrow4 {
+	font-size: 20pt;
+	color: @power-group-background-color;
+	background: @tray-background-color;
+}
