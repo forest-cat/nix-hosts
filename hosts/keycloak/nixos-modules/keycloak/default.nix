@@ -6,6 +6,7 @@
 }:
 
 {
+  
   services.keycloak = {
     package = pkgs-unstable.keycloak;
     enable = true;
@@ -13,10 +14,11 @@
       hostname = "id.forestcat.org";
       hostname-strict-backchannel = false;
       proxy = "edge";
+      http-enabled = true;
     };
     initialAdminPassword = "changeme";  # change on first login
-    # sslCertificate = "/home/nixuser/keys/forestcat.org_ssl_certificate.cer";
-    # sslCertificateKey = "/home/nixuser/keys/forestcat.org_private_key.key";
+    # sslCertificate = "/home/nixuser/keys/fc_org_certificate.pem";
+    # sslCertificateKey = "/home/nixuser/keys/fc_org_key.pem";
     database.createLocally = true;
     database.username = "keycloak";
     database.passwordFile = "/home/nixuser/keys/keycloak-keyfile";
