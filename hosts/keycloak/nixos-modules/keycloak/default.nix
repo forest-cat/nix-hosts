@@ -11,7 +11,7 @@
     enable = true;
     settings = {
       hostname = "id.forestcat.org";
-      hostname-strict-backchannel = true;
+      hostname-strict-backchannel = false;
     };
     initialAdminPassword = "changeme";  # change on first login
     sslCertificate = "/home/nixuser/keys/forestcat.org_ssl_certificate.cer";
