@@ -6,7 +6,7 @@
           Host github
             HostName github.com
             User git
-            IdentityFile ~/.ssh/id";
+            IdentityFile ~/.ssh/github_readonly_deploykey";
     enable = true;
 
   };
