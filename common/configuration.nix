@@ -88,6 +88,8 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  services.openssh.enable = true;
+
   services.avahi = {
     enable = true;
     nssmdns = true;
