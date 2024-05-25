@@ -1,11 +1,13 @@
 {
   config,
+  pkgs,
   pkgs-unstable,
   ...
 }:
 
 {
   services.keycloak = {
+    package = pkgs-unstable.keycloak;
     enable = true;
     settings = {
       hostname = "id.forestcat.org";

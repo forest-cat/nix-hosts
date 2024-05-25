@@ -36,7 +36,7 @@
           inherit pkgs-unstable;
         };
       };
-      keycloak = pkgs-unstable.lib.nixosSystem {
+      keycloak = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/keycloak/configuration.nix
@@ -44,14 +44,14 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.nixuser = import ./hosts/keycloak/home.nix;
-        #     home-manager.extraSpecialArgs = {
-        #       inherit pkgs-unstable;
-        #     };
+            home-manager.extraSpecialArgs = {
+              inherit pkgs-unstable;
+            };
           }
         ];
-        # specialArgs = {
-        #   inherit pkgs-unstable;
-        # };
+        specialArgs = {
+          inherit pkgs-unstable;
+        };
       };
       jana = nixpkgs.lib.nixosSystem {
         inherit system;
