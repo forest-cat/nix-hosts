@@ -58,7 +58,7 @@
       # Others.
       miau = "echo miau";
       ll = "ls -l";
-      cheetah = "curl -d 'Server: Done ✓' https://ntfy.forestcat.org/cheetah";
+      cheetah = "curl -d '$(hostname): Done ✓' https://ntfy.forestcat.org/cheetah";
       rebuild = "sudo nixos-rebuild switch --flake ~/nix-configs/ --show-trace";
       clean-gen = "sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system";
       clean-gc = "sudo nix-collect-garbage -d";
