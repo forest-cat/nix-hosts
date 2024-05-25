@@ -1,23 +1,27 @@
 {
   config,
   pkgs,
+  pkgs-unstable,
   ...
-}: {
-  imports = [
-    ./hardware-configuration.nix
-    ../../common/configuration.nix
-    ./nixos-modules/keycloak
-  ];
+}:
+
+{
   
-  #Bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  services.keycloak = {
+    package = pkgs-unstable.keycloak;
+    enable = true;
+    settings = {
+      hostname = "id.forestcat.org";
+      hostname-strict-backchannel = false;
+      proxy = "edge";
+      http-enabled = true;
+    };
+    initialAdminPassword = "changeme";  # change on first login
+    # sslCertificate = "/home/nixuser/keys/fc_org_certificate.pem";
+    # sslCertificateKey = "/home/nixuser/keys/fc_org_key.pem";
+    database.createLocally = true;
+    database.username = "keycloak";
+    database.passwordFile = "/home/nixuser/keys/keycloak-keyfile";
+  };
 
-  networking.hostName = "keycloak"; # Define your hostname.
-
-  # add specific system packages here
-  environment.systemPackages = with pkgs; [
-  ];
-
-  system.stateVersion = "23.05"; # Did you read the comment?
 }
