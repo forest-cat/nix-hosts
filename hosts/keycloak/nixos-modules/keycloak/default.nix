@@ -8,7 +8,7 @@
   services.keycloak = {
     enable = true;
     settings = {
-      hostname = "keycloak.example.com";
+      hostname = "id.forestcat.org";
       hostname-strict-backchannel = true;
     };
     initialAdminPassword = "e6Wcm0RrtegMEHl";  # change on first login
