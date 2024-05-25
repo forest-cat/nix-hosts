@@ -7,6 +7,10 @@
     ./hardware-configuration.nix
     ../../common/configuration.nix
   ];
+  
+  #Bootloader
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "examplehost"; # Define your hostname.
 
