@@ -28,7 +28,7 @@
     # https://github.com/ohmyzsh/ohmyzsh/wiki
     oh-my-zsh = {
       enable = true;
-      theme = "agnoster";
+      theme = "amuse";
       custom = "/home/nixuser/.config/oh-my-zsh-custom";
       plugins = [
         "history-substring-search"
