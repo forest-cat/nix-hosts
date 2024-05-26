@@ -19,6 +19,8 @@
 
   services.openssh.settings = {
     PasswordAuthentication = false;
+    PermitRootLogin = false;
+    PubkeyAuthentification = true;
   };
 
   # add specific system packages here
