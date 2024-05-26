@@ -19,7 +19,7 @@
 
   services.openssh.settings = {
     PasswordAuthentication = false;
-    PermitRootLogin = false;
+    PermitRootLogin = "no";
   };
 
   # add specific system packages here
