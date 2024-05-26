@@ -18,7 +18,7 @@
   networking.firewall.allowedTCPPorts = [ 80 443 ]; # allow http and https for keycloak
 
   services.openssh.settings = {
-    asswordAuthentication = false;
+    PasswordAuthentication = false;
   };
 
   # add specific system packages here
