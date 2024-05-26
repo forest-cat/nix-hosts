@@ -15,9 +15,9 @@
   networking.hostName = "examplehost"; # Define your hostname.
  
   services.openssh.extraConfig = "
-    PasswordAuthentication = no;
-    PermitRootLogin = no;
-    PubkeyAuthentification = yes";
+    PasswordAuthentication no;
+    PermitRootLogin no;
+    PubkeyAuthentification yes";
 
   # add specific system packages here
   environment.systemPackages = with pkgs; [
