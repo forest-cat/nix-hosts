@@ -70,6 +70,7 @@
       ga="git add *";
       gps="git push";
       gpl="git pull";
+      gl="git log";
       ac = "sudo tlp ac";
       auto = "sudo tlp auto";
       bat = "sudo tlp bat";
