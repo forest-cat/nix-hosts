@@ -15,6 +15,9 @@
     description = "nixuser";
     # extraGroups = [ "wheel" "audio" "video" "input" "networkmanager" "adbusers" ];
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGMqbXz+ZsvhwDrCzypYYZmHxzjFn2KP2KzvtnZuY51e forestcat"
+    ];
   };
 
 
