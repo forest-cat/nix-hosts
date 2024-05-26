@@ -14,6 +14,10 @@
 
   networking.hostName = "examplehost"; # Define your hostname.
 
+  services.openssh.settings = {
+    PasswordAuthentication = false;
+  };
+
   # add specific system packages here
   environment.systemPackages = with pkgs; [
   ];
