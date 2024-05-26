@@ -17,11 +17,10 @@
 
   networking.firewall.allowedTCPPorts = [ 80 443 ]; # allow http and https for keycloak
 
-  services.openssh.settings = {
-    PasswordAuthentication = "no";
-    PermitRootLogin = "no";
-    PubkeyAuthentification = "yes";
-  };
+  services.openssh.extraConfig = "
+    PasswordAuthentication = no;
+    PermitRootLogin = no;
+    PubkeyAuthentification = yes";
 
   # add specific system packages here
   environment.systemPackages = with pkgs; [
