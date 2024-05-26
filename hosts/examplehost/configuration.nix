@@ -13,9 +13,11 @@
   boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "examplehost"; # Define your hostname.
-
+ 
   services.openssh.settings = {
     PasswordAuthentication = false;
+    PermitRootLogin = false;
+    PubkeyAuthentification = true;
   };
 
   # add specific system packages here
