@@ -8,6 +8,7 @@
 {
   services.nextcloud = {
     enable = true;
+    package = pkgs.nextcloud27;
     hostName = "nextcloud.forestcat.org";
     autoUpdateApps.enable = true;
     database.createLocally = true;
