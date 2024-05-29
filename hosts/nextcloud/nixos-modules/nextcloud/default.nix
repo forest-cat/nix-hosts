@@ -24,7 +24,7 @@
     configureRedis = true;
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
-      inherit bookmarks contacts notes calendar tasks twofactor_webauthn user_oidc;
+      inherit bookmarks contacts calendar tasks twofactor_webauthn user_oidc;
     };
 
   };
