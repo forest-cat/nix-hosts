@@ -25,7 +25,7 @@
     configureRedis = true;
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
-      inherit user_oidc;
+      inherit contacts calendar notes user_oidc;
     };
 
   };
