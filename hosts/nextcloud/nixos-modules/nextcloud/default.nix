@@ -12,13 +12,14 @@
     hostName = "cloud.forestcat.org";
     autoUpdateApps.enable = true;
     database.createLocally = true;
+    https = true;
     config = {
       dbtype = "pgsql";
       dbname = "nextcloud";
       dbuser = "nextcloud";
       adminuser = "admin";
       adminpassFile = "/home/nextcloud/db_passfile";
-      extraTrustedDomains = [ "nextcloud.fritz.box" ];
+      # extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
     configureRedis = true;
   };
