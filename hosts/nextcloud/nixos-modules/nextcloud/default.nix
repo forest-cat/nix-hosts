@@ -27,7 +27,7 @@
         dbindex = 0;
         timeout = 1.5;
       };
-    }:
+    };
   };
   redis.servers.nextcloud = {
       enable = true;
