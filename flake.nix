@@ -36,6 +36,23 @@
           inherit pkgs-unstable;
         };
       };
+      nextcloud = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/nextcloud/configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.nixuser = import ./hosts/nextcloud/home.nix;
+            home-manager.extraSpecialArgs = {
+              inherit pkgs-unstable;
+            };
+          }
+        ];
+        specialArgs = {
+          inherit pkgs-unstable;
+        };
+      };
       keycloak = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
