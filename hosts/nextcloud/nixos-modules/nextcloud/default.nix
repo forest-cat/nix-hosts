@@ -22,10 +22,10 @@
       # extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
     configureRedis = true;
-    # extraAppsEnable = true;
-    # extraApps = with config.services.nextcloud.package.packages.apps; {
-    #   inherit bookmarks contacts calendar tasks twofactor_webauthn user_oidc;
-    # };
+    extraAppsEnable = true;
+    extraApps = with config.services.nextcloud.package.packages.apps; {
+      inherit user_oidc;
+    };
 
   };
   networking.firewall.allowedTCPPorts = [ 80 443 ];
