@@ -18,9 +18,9 @@
       dbuser = "nextcloud";
       adminuser = "admin";
       adminpassFile = "/home/nextcloud/db_passfile";
+      extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
     configureRedis = true;
-    settings.trusted_domains = [ "nextcloud.fritz.box" ];
   };
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
