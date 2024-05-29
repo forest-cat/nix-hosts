@@ -18,22 +18,7 @@
       adminuser = "admin";
       adminpassFile = "/home/nextcloud/db_passfile";
     };
-    caching.redis = true;
-    # specify only if you want redis caching
-    extraOptions = {
-      redis = {
-        host = "127.0.0.1";
-        port = 31638;
-        dbindex = 0;
-        timeout = 1.5;
-      };
-    };
+    configureRedis = true;
   };
-  redis.servers.nextcloud = {
-      enable = true;
-      port = 31638;
-      bind = "127.0.0.1";
-  };
-
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
