@@ -19,6 +19,7 @@
       dbuser = "nextcloud";
       adminuser = "admin";
       adminpassFile = "/home/nextcloud/db_passfile";
+      defaultPhoneRegion = "DE";
       # extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
     configureRedis = true;
