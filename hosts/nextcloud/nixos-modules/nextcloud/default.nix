@@ -20,6 +20,7 @@
       adminpassFile = "/home/nextcloud/db_passfile";
     };
     configureRedis = true;
+    settings.trusted_domains = [ "nextcloud.fritz.box" ];
   };
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
