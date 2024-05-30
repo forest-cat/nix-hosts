@@ -22,6 +22,9 @@
       defaultPhoneRegion = "DE";
       # extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
+    phpOptions = {
+      "opcache.interned_strings_buffer" = "16";
+    };
     configureRedis = true;
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
