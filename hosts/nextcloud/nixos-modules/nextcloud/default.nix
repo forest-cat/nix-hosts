@@ -30,9 +30,6 @@
     extraApps = with config.services.nextcloud.package.packages.apps; {
       inherit contacts calendar notes user_oidc;
     };
-    extraOptions = {
-      'social_login_auto_redirect' = true;
-    };
 
   };
   networking.firewall.allowedTCPPorts = [ 80 443 ];
