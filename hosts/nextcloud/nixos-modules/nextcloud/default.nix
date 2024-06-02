@@ -30,8 +30,8 @@
     extraApps = with config.services.nextcloud.package.packages.apps; {
       inherit contacts calendar notes user_oidc;
     };
-    settings = {
-      socialAutoLoginRedirection = true;
+    extraOptions = {
+      "social_login_auto_redirect' => true";
     };
 
   };
