@@ -31,7 +31,7 @@
       inherit contacts calendar notes user_oidc;
     };
     extraOptions = {
-      "social_login_auto_redirect' => true";
+      social_login_auto_redirect = true;
     };
 
   };
