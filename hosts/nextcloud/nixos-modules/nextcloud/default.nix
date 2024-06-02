@@ -33,6 +33,7 @@
     # change to nextcloud.settings after version 24.05
     extraOptions = {
       hide_login_form = true;
+      maintenance_window_start = 1;
     };
     # change to nextcloud.settings.log_type after version 24.05
     logType = "file"; # make webui logreader able to read logs
