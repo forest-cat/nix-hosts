@@ -30,10 +30,12 @@
     extraApps = with config.services.nextcloud.package.packages.apps; {
       inherit contacts calendar notes user_oidc;
     };
-    # turn to nextlcoud.settings after version 24.05
+    # change to nextcloud.settings after version 24.05
     extraOptions = {
       hide_login_form = true;
     };
+    # change to nextcloud.settings.log_type after version 24.05
+    logType = "file"; # make webui logreader able to read logs
 
 
   };
