@@ -31,8 +31,8 @@
       inherit contacts calendar notes user_oidc;
     };
     # turn to nextlcoud.settings after version 24.05
-    services.nextcloud.extraOptions = {
-      'hide_login_form' = true;
+    extraOptions = {
+      hide_login_form = true;
     };
 
 
