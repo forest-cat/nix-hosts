@@ -30,6 +30,11 @@
     extraApps = with config.services.nextcloud.package.packages.apps; {
       inherit contacts calendar notes user_oidc;
     };
+    # turn to nextlcoud.settings after version 24.05
+    services.nextcloud.extraOptions = {
+      hide_login_form = true;
+    };
+
 
   };
   networking.firewall.allowedTCPPorts = [ 80 443 ];
