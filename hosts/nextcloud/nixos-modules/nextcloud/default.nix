@@ -26,6 +26,7 @@
       "opcache.interned_strings_buffer" = "16";
     };
     configureRedis = true;
+    appstoreEnable = true; # enable appstore again because extra apps disables it
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
       inherit contacts calendar notes user_oidc files_external;
