@@ -28,7 +28,7 @@
     configureRedis = true;
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
-      inherit contacts calendar notes user_oidc;
+      inherit contacts calendar notes user_oidc files_external;
     };
     # change to nextcloud.settings after version 24.05
     extraOptions = {
