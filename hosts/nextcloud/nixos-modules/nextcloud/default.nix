@@ -38,6 +38,7 @@
     };
     # change to nextcloud.settings.log_type after version 24.05
     logType = "file"; # make webui logreader able to read logs
+    phpExtraExtensions = all: [ all.smbclient ];
 
 
   };

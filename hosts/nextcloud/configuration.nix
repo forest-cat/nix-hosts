@@ -22,10 +22,10 @@
 
   # add specific system packages here
   environment.systemPackages = with pkgs; [
-    php83Extensions.smbclient # smbclient for external storage application in nextcloud
-    php82Extensions.smbclient # smbclient for external storage application in nextcloud
-    php81Extensions.smbclient # smbclient for external storage application in nextcloud
-    samba4Full
+    # php83Extensions.smbclient # smbclient for external storage application in nextcloud
+    # php82Extensions.smbclient # smbclient for external storage application in nextcloud
+    # php81Extensions.smbclient # smbclient for external storage application in nextcloud
+    # samba4Full
   ];
 
   system.stateVersion = "23.05"; # Did you read the comment?
