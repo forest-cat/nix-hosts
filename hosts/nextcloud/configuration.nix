@@ -22,6 +22,7 @@
 
   # add specific system packages here
   environment.systemPackages = with pkgs; [
+    php82Extensions.smbclient # smbclient for external storage application in nextcloud
   ];
 
   system.stateVersion = "23.05"; # Did you read the comment?
