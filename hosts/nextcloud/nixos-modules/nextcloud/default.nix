@@ -29,7 +29,7 @@
     appstoreEnable = true; # enable appstore again because extra apps disables it
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
-      inherit contacts calendar notes user_oidc files_external;
+      inherit contacts calendar notes user_oidc;
     };
     # change to nextcloud.settings after version 24.05
     extraOptions = {
