@@ -19,6 +19,7 @@
       dbuser = "nextcloud";
       adminuser = "admin";
       adminpassFile = "/home/nextcloud/db_passfile";
+      defaultPhoneRegion = "DE";
       # extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
     phpOptions = {
@@ -30,12 +31,13 @@
     extraApps = with config.services.nextcloud.package.packages.apps; {
       inherit contacts calendar notes user_oidc;
     };
-    settings = {
+    # change to nextcloud.settings after version 24.05
+    extraOptions = {
       hide_login_form = true;
       maintenance_window_start = 1;
-      log_type = "file"; # make webui logreader able to read logs
-      default_phone_region = "DE";
     };
+    # change to nextcloud.settings.log_type after version 24.05
+    logType = "file"; # make webui logreader able to read logs
     phpExtraExtensions = all: [ all.smbclient ];
 
 
