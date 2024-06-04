@@ -19,7 +19,6 @@
       dbuser = "nextcloud";
       adminuser = "admin";
       adminpassFile = "/home/nextcloud/db_passfile";
-      defaultPhoneRegion = "DE";
       # extraTrustedDomains = [ "nextcloud.fritz.box" ];
     };
     phpOptions = {
@@ -35,6 +34,7 @@
       hide_login_form = true;
       maintenance_window_start = 1;
       log_type = "file"; # make webui logreader able to read logs
+      default_phone_region = "DE";
     };
     phpExtraExtensions = all: [ all.smbclient ];
 
