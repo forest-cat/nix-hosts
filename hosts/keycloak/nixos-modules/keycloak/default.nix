@@ -12,6 +12,7 @@
     enable = true;
     settings = {
       hostname = "id.forestcat.org";
+      hostname-admin = "id-admin.forestcat.org";
       hostname-strict-backchannel = false;
       proxy = "edge";
       http-enabled = true;
