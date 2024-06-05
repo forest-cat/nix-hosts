@@ -13,7 +13,7 @@
         locations = {
           # Redirect a user opening any not set location on id.forestcat.org to the account management page.
           "^~ /" = {
-            return = "307 https://id.forestcat.org/realms/nekoverse/account/";
+            return = "307 https://id.forestcat.org/realms/master/account/";
           };
           "/js/" = {
             proxyPass = "http://127.0.0.1:8080/js/";
