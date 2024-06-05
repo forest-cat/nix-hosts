@@ -3,7 +3,7 @@
   security.acme = {
     acceptTerms = true;
     defaults.email = "cat@forestcat.org";
-  }
+  };
   services.nginx = {
     enable = true;
     virtualHosts = {
