@@ -13,9 +13,12 @@
     settings = {
       hostname = "id.forestcat.org";
       hostname-admin = "id-admin.forestcat.org";
-      hostname-strict-backchannel = false;
+      hostname-strict-backchannel = true;
       proxy = "edge";
       http-enabled = true;
+      http-host = "127.0.0.1";
+      http-port = 8080;
+
     };
     initialAdminPassword = "changeme";  # change on first login
     # sslCertificate = "/home/nixuser/keys/fc_org_certificate.pem";

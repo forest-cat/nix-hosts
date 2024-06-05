@@ -15,7 +15,7 @@
 
   networking.hostName = "keycloak"; # Define your hostname.
 
-  networking.firewall.allowedTCPPorts = [ 80 443 ]; # allow http and https for keycloak
+  networking.firewall.allowedTCPPorts = [ 80 443 8443 ]; # allow http and https for keycloak
 
   services.openssh.settings = {
     PasswordAuthentication = false;
