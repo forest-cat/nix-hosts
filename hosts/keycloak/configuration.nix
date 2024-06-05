@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../../common/configuration.nix
     ./nixos-modules/keycloak
+    ./nixos-modules/nginx
   ];
   
   #Bootloader
