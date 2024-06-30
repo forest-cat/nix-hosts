@@ -8,7 +8,7 @@
 {
   
   services.keycloak = {
-    package = pkgs-unstable.keycloak;
+    package = pkgs.keycloak;
     enable = true;
     settings = {
       hostname = "id.forestcat.org";
