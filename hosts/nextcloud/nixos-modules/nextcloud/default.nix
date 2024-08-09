@@ -28,7 +28,7 @@
     appstoreEnable = true; # enable appstore again because extra apps disables it
     extraAppsEnable = true;
     extraApps = with config.services.nextcloud.package.packages.apps; {
-      inherit contacts calendar notes user_oidc tasks;
+      inherit contacts calendar notes user_oidc tasks memories;
     };
     settings = {
       hide_login_form = true;
