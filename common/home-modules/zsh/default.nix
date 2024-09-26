@@ -42,7 +42,7 @@
 
     initExtra = ''
       nx() {
-        nix shell nixpkgs/nixos-23.11#$@
+        nix shell nixpkgs#$@
       }
 
       # history-substring-search configuration
@@ -54,7 +54,7 @@
     '';
 
     shellAliases = {
-      # Others.
+     # Others.
       miau = "echo miau";
       ll = "ls -l";
       cheetah = "curl -d \"$(hostname): Done ✓\" https://ntfy.forestcat.org/cheetah";
@@ -70,11 +70,7 @@
       gps="git push";
       gpl="git pull";
       gl="git log";
-      ac = "sudo tlp ac";
-      auto = "sudo tlp auto";
-      bat = "sudo tlp bat";
       neofetch = "neowofetch";
-      powermode="cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor";
       ssh="TERM=xterm-256color ssh";
     };
   };
