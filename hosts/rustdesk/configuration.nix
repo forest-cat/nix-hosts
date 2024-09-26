@@ -6,7 +6,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../common/configuration.nix
-    ./nixos-modules/rustdesk/
+    ./nixos-modules/rustdesk
   ];
   
   #Bootloader
