@@ -24,6 +24,7 @@
     phpOptions = {
       "opcache.interned_strings_buffer" = "16";
     };
+    maxUploadSize = "10G";
     configureRedis = true;
     appstoreEnable = true; # enable appstore again because extra apps disables it
     extraAppsEnable = true;
