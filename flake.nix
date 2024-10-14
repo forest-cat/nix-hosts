@@ -87,6 +87,23 @@
           inherit pkgs-unstable;
         };
       };
+      firefly = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/firefly/configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.nixuser = import ./hosts/firefly/home.nix;
+            home-manager.extraSpecialArgs = {
+              inherit pkgs-unstable;
+            };
+          }
+        ];
+        specialArgs = {
+          inherit pkgs-unstable;
+        };
+      };
       jana = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
