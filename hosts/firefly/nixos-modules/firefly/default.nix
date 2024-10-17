@@ -18,6 +18,7 @@
       SITE_OWNER = "firefly@forestcat.org";
       APP_KEY_FILE = "/var/secrets/firefly-iii-app-key.txt";
       DB_CONNECTION = "sqlite";
+      TRUSTED_PROXIES="**";
     };
   };
 }
