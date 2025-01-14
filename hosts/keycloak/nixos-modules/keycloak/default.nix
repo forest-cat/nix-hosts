@@ -11,10 +11,10 @@
     package = pkgs.keycloak;
     enable = true;
     settings = {
-      hostname = "id.forestcat.org";
-      hostname-admin = "id-admin.forestcat.org";
-      hostname-strict-backchannel = true;
-      proxy = "edge";
+      hostname = "https://id.forestcat.org";
+      hostname-admin = "https://id-admin.forestcat.org";
+      hostname-backchannel-dynamic = false;
+      proxy-headers = "forwarded";
       http-enabled = true;
       http-host = "127.0.0.1";
       http-port = 8080;
