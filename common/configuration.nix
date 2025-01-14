@@ -20,6 +20,13 @@
     ];
   };
 
+  users.users.root = {
+    shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGMqbXz+ZsvhwDrCzypYYZmHxzjFn2KP2KzvtnZuY51e forestcat"
+    ];
+  };
+
 
   # Enable ntfs support at boot
   boot.supportedFilesystems = [ "ntfs" ];
