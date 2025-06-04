@@ -80,7 +80,7 @@
   (with pkgs-unstable; [
     # unstable system packages here
   ]);
-  shellAliases = {
+  environment.shellAliases = {
 	miau = "echo miau";
 	ll = "ls -l";
 	cheetah = "curl -d \"$(hostname): Done ✓\" https://ntfy.forestcat.org/cheetah";
