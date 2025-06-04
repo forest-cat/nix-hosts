@@ -64,6 +64,7 @@
     tldr
     git
     speedtest-cli
+    screen
     hyfetch
     nfs-utils # utils for nfs shares
     cifs-utils # support for samba shares
@@ -79,6 +80,33 @@
   (with pkgs-unstable; [
     # unstable system packages here
   ]);
+  shellAliases = {
+	miau = "echo miau";
+	ll = "ls -l";
+	cheetah = "curl -d \"$(hostname): Done ✓\" https://ntfy.forestcat.org/cheetah";
+	rebuild = "sudo nixos-rebuild switch --flake ~/nix-configs/ --show-trace";
+	home-rebuild = "home-manager switch --flake ~/nix-configs#$(hostname)";
+	clean-gen = "sudo nix-env --delete-generations old --profile /nix/var/nix/profiles/system";
+	clean-gc = "sudo nix-collect-garbage -d";
+	list-gen = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";
+	gd="git diff";
+	gds="git diff --staged";
+	gic="git commit";
+	gis="git status";
+	ga="git add *";
+	gps="git push";
+	gpl="git pull";
+	gl="git log";
+	ac = "sudo tlp ac";
+	auto = "sudo tlp auto";
+	bat = "sudo tlp bat";
+	neofetch = "neowofetch";
+	powermode="cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor";
+	bluetuith="bluetuith --receive-dir /home/tessa/Downloads";
+	ssh="TERM=xterm-256color ssh";
+	getnewgtalobby="pkill -STOP GTA5 && sleep 8 && pkill -CONT GTA5";
+	pacman= "sudo pacman";
+};
 
 
 
