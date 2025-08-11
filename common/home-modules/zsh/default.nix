@@ -40,7 +40,7 @@
       '';
     };
 
-    initExtra = ''
+    initContent = ''
       nx() {
         nix shell nixpkgs#$@
       }
