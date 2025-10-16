@@ -9,7 +9,7 @@
     virtualHosts = {
       "id.forestcat.org" = {
         forceSSL = true;
-        # enableACME = true;
+        enableACME = true;
         locations = {
           # Redirect a user opening any not set location on id.forestcat.org to the account management page.
           "^~ /" = {
@@ -55,7 +55,7 @@
       };
       "id-admin.forestcat.org" = {
         forceSSL = true;
-        # enableACME = true;
+        enableACME = true;
         listen = [
           {
             addr = "0.0.0.0";
