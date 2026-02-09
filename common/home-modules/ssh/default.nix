@@ -2,7 +2,7 @@
 
 {
   programs.ssh = {
-    programs.ssh.enableDefaultConfig = false;
+    enableDefaultConfig = false;
     extraConfig = "
           Host github
             HostName github.com
