@@ -6,7 +6,7 @@
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
 
-    dotDir = ".config/zsh";
+    dotDir = "${config.home.homeDirectory}/.config/zsh";
 
     history = {
       extended = true;
